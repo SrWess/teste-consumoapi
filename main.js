@@ -6,10 +6,10 @@ const modal = document.getElementById("modal-state");
 const divVersisonsCar = document.querySelector(".versionsCar");
 const divInfoColors = document.querySelector(".infoColors");
 
-const spanStateUf = document.getElementById('stateSelected')
+const spanStateUf = document.getElementById("stateSelected");
 const priceState = document.getElementById("priceState");
 
-const nameCar = document.getElementById('nameCar')
+const nameCar = document.getElementById("nameCar");
 
 const states = {
   AC: "Acre",
@@ -45,6 +45,18 @@ const fetchHonda = async () => {
   const response = await fetch("http://localhost:3000");
   const responseJson = await response.json();
 
+  const containsUFState = localStorage.getItem("HONDA_LOCAL_STATE");
+
+  if (!containsUFState) {
+    modal.style.display = "flex";
+  }
+
+  spanStateUf.innerText = `${
+    containsUFState
+      ? `${containsUFState}(${states[containsUFState]})`
+      : "Escolha um Estado"
+  }`;
+
   const civic = responseJson.civic;
   const listStatesPPs = civic.version_features[0].colors[1].pps;
 
@@ -68,15 +80,17 @@ fetchHonda();
 
 function infoCar(civic) {
   const infoPPs = civic.version_features[0].colors[1].pps;
-  const ufSaved = window.localStorage.getItem("HONDA_LOCAL_STATE");
+  const ufSaved = localStorage.getItem("HONDA_LOCAL_STATE");
 
   const infoStates = Object.entries(infoPPs);
 
   for (let i = 0; i < infoStates.length; i++) {
     if (infoStates[i][0] === ufSaved) {
       findVersions(civic);
-      nameCar.innerText = civic.marketing_name
-      priceState.innerText = Number(infoStates[i][1].field_pps_preco).toLocaleString('pt-br',{style: 'currency', currency: 'BRL'});
+      nameCar.innerText = civic.marketing_name;
+      priceState.innerText = Number(
+        infoStates[i][1].field_pps_preco
+      ).toLocaleString("pt-br", { style: "currency", currency: "BRL" });
     }
   }
 }
@@ -119,21 +133,19 @@ const templateInfoVersion = (info) => {
 
     divInfoColors.innerHTML += html;
   });
-}
+};
 
 function changeState() {
-  if(modal.style.display = 'none') {
-    modal.style.display = 'flex'
+  if ((modal.style.display = "none")) {
+    modal.style.display = "flex";
   }
 }
 
 function handleClick() {
   const ufState = selectStates.value;
 
-  stateSelected.innerText = `${ufState}(${states[ufState]})`
-
-  window.localStorage.setItem("HONDA_LOCAL_STATE", ufState);
-  modal.style.display = 'none'
+  localStorage.setItem("HONDA_LOCAL_STATE", ufState);
+  modal.style.display = "none";
 
   fetchHonda();
 }

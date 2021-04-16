@@ -1,0 +1,169 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  width: 100%;
+  padding: 1.5rem;
+  box-shadow: 0 2px 0px #f3f3f3;
+}
+header .location {
+  font-size: 0.9rem;
+}
+header .location p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header .locationPicked {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+header .locationPicked span {
+  color: #c00;
+  cursor: pointer;
+  margin-right: 5px;
+}
+main {
+  background: #fff;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .infoCar {
+  background: #fbfbfb;
+  width: 50%;
+  height: 40%;
+  border-radius: 10px;
+  padding: 2.5rem;
+  box-shadow: 0 2px 10px 2px #ececec;
+}
+main .infoCar h3 {
+  color: #c00;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+}
+main .infoCar .versionsCar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+main .infoCar .versionsCar a {
+  text-decoration: none;
+  color: #5c5c5c;
+  font-size: 1.2rem;
+  transition: font-size 0.4s ease;
+}
+main .infoCar .versionsCar a:hover {
+  font-size: 1.3rem;
+  color: #c00;
+}
+main .infoCar .infoPrice {
+  display: flex;
+  justify-content: center;
+}
+main .infoCar .infoPrice span {
+  display: flex;
+  margin-top: 2rem;
+  font-weight: bold;
+}
+main .infoCar .infoPrice p {
+  color: #c00;
+  margin-left: 5px;
+}
+main .infoCar .infoColors {
+  display: flex;
+  justify-content: center;
+}
+main .infoCar .infoColors p {
+  color: #5c5c5c;
+}
+main .infoCar .infoColors .colors-hex {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+  box-shadow: inset 0 1px 8px rgba(0,0,0,0.29);
+}
+.modal-state,
+.modal-state .modal-container {
+  background: rgba(6,6,6,0.6);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+}
+.modal-state .modal-container,
+.modal-state .modal-container .modal-container {
+  width: 30%;
+  height: 50vh;
+  background: #fff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+.modal-state .modal-container .modal-title h3,
+.modal-state .modal-container .modal-container .modal-title h3 {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+.modal-state .modal-container h2,
+.modal-state .modal-container .modal-container h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.modal-state .modal-description,
+.modal-state .modal-container .modal-description {
+  color: #525252;
+  font-size: 0.9rem;
+  max-width: 300px;
+}
+.modal-state .modal-search,
+.modal-state .modal-container .modal-search {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: 60%;
+  margin-top: 0.5rem;
+}
+.modal-state .modal-search select,
+.modal-state .modal-container .modal-search select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.modal-state .modal-search button,
+.modal-state .modal-container .modal-search button {
+  background: #c00;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+.modal-state .modal-search button:hover,
+.modal-state .modal-container .modal-search button:hover {
+  background: #b20303;
+}

@@ -129,8 +129,6 @@ const templateInfoVersion = (info) => {
       <div class="colors-hex" style="background: ${color.hex}"></div>
     `;
 
-    console.log(color);
-
     divInfoColors.innerHTML += html;
   });
 };

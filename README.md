@@ -19,7 +19,7 @@ $ cd teste-consumoapi
 $ yarn install ou npm install
 
 ## Executa aplicação como desenvolvimento
-$ yarn start ou npm install
+$ yarn start ou npm start
 
 ## Acessar a página index.html que se encontra na pasta principal
 ## Também pode utilizar Live Server do VSCode

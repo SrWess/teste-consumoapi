@@ -1,7 +1,7 @@
 const selectStates = document.getElementById("state");
 const buttonState = document.getElementById("sendState");
 
-const modal = document.getElementById("modal-state");
+const modal = document.querySelector('.modal-state')
 
 const divVersisonsCar = document.querySelector(".versionsCar");
 const divInfoColors = document.querySelector(".infoColors");
@@ -48,7 +48,7 @@ const fetchHonda = async () => {
   const containsUFState = localStorage.getItem("HONDA_LOCAL_STATE");
 
   if (!containsUFState) {
-    modal.style.display = "flex";
+    changeState()
   }
 
   spanStateUf.innerText = `${
@@ -140,8 +140,8 @@ const templateInfoVersion = (info) => {
 };
 
 function changeState() {
-  if ((modal.style.display = "none")) {
-    modal.style.display = "flex";
+  if(!modal.classList.contains('active')) {
+    modal.classList.add('active')
   }
 }
 
@@ -149,7 +149,7 @@ function handleClick() {
   const ufState = selectStates.value;
 
   localStorage.setItem("HONDA_LOCAL_STATE", ufState);
-  modal.style.display = "none";
+  modal.classList.remove('active')
 
   fetchHonda();
 }

@@ -62,6 +62,12 @@ const fetchHonda = async () => {
 
   const infoStates = Object.entries(listStatesPPs);
 
+  selectStates.innerHTML = `
+    <option selected="true" disabled="disabled">
+      Selecione um Estado
+    </option>
+  `;
+
   for (let i = 0; i < infoStates.length; i++) {
     const name = infoStates[i][0];
 

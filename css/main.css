@@ -110,6 +110,9 @@ main .infoCar .infoColors .colors-hex {
   position: absolute;
   top: 0;
 }
+.modal-state.active {
+  display: flex;
+}
 .modal-state .modal-container {
   display: flex;
   justify-content: center;

@@ -25,7 +25,7 @@
         <p>
           Você está em
           <div class="locationPicked" onclick="changeState()">
-            <span id="stateSelected"
+            <span class="stateSelected"
             >Escolha um Estado</span
           ><img
             src="assets/icons/edit.svg"
@@ -38,7 +38,7 @@
 
     <main>
       <section class="infoCar">
-        <h3 id="nameCar">Nome Marketing</h3>
+        <h3 class="nameCar">Nome Marketing</h3>
         <div class="versionsCar"></div>
         <div class="infoColors">
           <p>Selecione uma versão para ver as cores disponiveis</p>
@@ -46,13 +46,13 @@
         <div class="infoPrice">
           <span
             >A partir de
-            <p id="priceState"></p
+            <p class="priceState"></p
           ></span>
         </div>
       </section>
     </main>
 
-    <div class="modal-state" id="modal-state">
+    <div class="modal-state">
       <div class="modal-container">
         <div class="modal-title">
           <h3>Bem-vindo ao site</h3>
@@ -67,12 +67,12 @@
         </div>
 
         <div class="modal-search">
-          <select name="state" id="state">
+          <select name="state" class="state">
             <option selected="true" disabled="disabled">
               Selecione um Estado
             </option>
           </select>
-          <button id="sendState">Enviar</button>
+          <button class="sendState">Enviar</button>
         </div>
       </div>
     </div>

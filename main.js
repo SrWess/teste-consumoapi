@@ -1,15 +1,15 @@
-const selectStates = document.getElementById("state");
-const buttonState = document.getElementById("sendState");
+const selectStates = document.querySelector(".state");
+const buttonState = document.querySelector(".sendState");
 
 const modal = document.querySelector('.modal-state')
 
 const divVersisonsCar = document.querySelector(".versionsCar");
 const divInfoColors = document.querySelector(".infoColors");
 
-const spanStateUf = document.getElementById("stateSelected");
-const priceState = document.getElementById("priceState");
+const spanStateUf = document.querySelector(".stateSelected");
+const priceState = document.querySelector(".priceState");
 
-const nameCar = document.getElementById("nameCar");
+const nameCar = document.querySelector(".nameCar");
 
 const states = {
   AC: "Acre",

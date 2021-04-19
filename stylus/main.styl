@@ -75,15 +75,23 @@ main
     .infoColors
       display: flex
       justify-content: center
+      flex-direction: column
+      align-items: center
       p
         color: #5C5C5C
-      .colors-hex
-        width: 30px
-        height: 30px
-        border-radius: 50%
-        margin-right: 10px 
-        cursor pointer
-        box-shadow: inset 0 1px 8px #0000004a
+      .listColors
+        display: flex
+        .colors-hex
+          width: 30px
+          height: 30px
+          border-radius: 50%
+          margin-right: 10px 
+          cursor pointer
+          box-shadow: inset 0 1px 8px #0000004a
+      .nameColorSelected
+        margin-top: 1rem
+        font-size: 0.9rem
+        color: #5c5c5c
 
 .modal-state
   background: #06060699

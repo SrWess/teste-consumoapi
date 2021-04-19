@@ -1,10 +1,12 @@
 const selectStates = document.querySelector(".state");
 const buttonState = document.querySelector(".sendState");
 
-const modal = document.querySelector('.modal-state')
+const modal = document.querySelector(".modal-state");
 
 const divVersisonsCar = document.querySelector(".versionsCar");
 const divInfoColors = document.querySelector(".infoColors");
+const divListColors = document.querySelector(".listColors");
+const nameColorSelected = document.querySelector('.nameColorSelected')
 
 const spanStateUf = document.querySelector(".stateSelected");
 const priceState = document.querySelector(".priceState");
@@ -48,7 +50,7 @@ const fetchHonda = async () => {
   const containsUFState = localStorage.getItem("HONDA_LOCAL_STATE");
 
   if (!containsUFState) {
-    changeState()
+    changeState();
   }
 
   spanStateUf.innerText = `${
@@ -114,10 +116,11 @@ function findVersions(nameCar) {
     versionCar.addEventListener("click", (event) => {
       event.preventDefault();
       linkClicked = event.target.innerText;
+      const versionCarAvailable = nameCar.version_features;
 
-      Array.from(nameCar.version_features).forEach((info) => {
+      versionCarAvailable.forEach((info) => {
         if (linkClicked === info.version) {
-          templateInfoVersion(info);
+          templateInfoColor(info);
         }
       });
     });
@@ -126,22 +129,27 @@ function findVersions(nameCar) {
   }
 }
 
-const templateInfoVersion = (info) => {
-  divInfoColors.innerHTML = "";
+const templateInfoColor = (info) => {
+  divListColors.innerHTML = ""
+  nameColorSelected.innerHTML = ""
 
-  const arrayColors = Array.from(info.colors);
-  arrayColors.forEach((color) => {
-    const html = `
-      <div class="colors-hex" style="background: ${color.hex}"></div>
-    `;
+  const listColorsAvailable = info.colors;
 
-    divInfoColors.innerHTML += html;
+  listColorsAvailable.forEach((color) => {
+    const colorHex = document.createElement("div");
+    colorHex.classList.add("colors-hex");
+    colorHex.style.background = `${color.hex}`;
+    colorHex.addEventListener("click", () => {
+      nameColorSelected.innerHTML = `${color.name}`
+    });
+
+    divListColors.appendChild(colorHex);
   });
 };
 
 function changeState() {
-  if(!modal.classList.contains('active')) {
-    modal.classList.add('active')
+  if (!modal.classList.contains("active")) {
+    modal.classList.add("active");
   }
 }
 
@@ -149,7 +157,7 @@ function handleClick() {
   const ufState = selectStates.value;
 
   localStorage.setItem("HONDA_LOCAL_STATE", ufState);
-  modal.classList.remove('active')
+  modal.classList.remove("active");
 
   fetchHonda();
 }

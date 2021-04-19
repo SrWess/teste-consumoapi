@@ -1,149 +1,165 @@
 *,
 *::after,
 *::before 
-  padding: 0
-  margin: 0
-  box-sizing: border-box
+  padding 0
+  margin 0
+  box-sizing border-box
 
 body 
-  font-family: 'Inter', sans-serif;
-  background: white
+  font-family 'Inter', sans-serif
+  background white
 
 header 
-  display: flex
-  align-items: center
-  justify-content: space-around
-  position: fixed
-  width: 100%
-  padding: 1.5rem
-  box-shadow: 0 2px 0px #f3f3f3;
+  display flex
+  align-items center
+  justify-content space-around
+  position fixed
+  width 100%
+  padding 1.5rem
+  box-shadow 0 2px 0px #f3f3f3
+
   .location
-    font-size: 0.9rem
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size 0.9rem
+    display flex
+    flex-direction column
+    align-items center
+
   .locationPicked
-    display: flex
-    align-items: center
-    cursor: pointer
+    display flex
+    align-items center
+    cursor pointer
+
     span
-      color: #cc0000
-      cursor: pointer
-      margin-right: 5px;
+      color #cc0000
+      cursor pointer
+      margin-right 5px
 
 main
-  background: white
-  width: 100%
-  height: 100vh
-  display: flex
-  justify-content: center
-  align-items: center
-  flex-direction: column
+  background white
+  width 100%
+  height 100vh
+  display flex
+  justify-content center
+  align-items center
+  flex-direction column
+
   .infoCar
-    background: #FBFBFB
+    background #FBFBFB
     width 50%
-    height: 40%
-    border-radius: 10px
-    padding: 2.5rem
-    box-shadow: 0 2px 10px 2px #ececec;
+    height 40%
+    border-radius 10px
+    padding 2.5rem
+    box-shadow 0 2px 10px 2px #ececec
     h3
-      color: #cc0000
-      margin-bottom: 1rem;
-      font-size: 1.4rem
-    .versionsCar 
-      display: flex
-      justify-content: space-between
-      margin-bottom: 1.5rem
+      color #cc0000
+      margin-bottom 1rem
+      font-size 1.4rem
+
+    .listCarVersions 
+      display flex
+      justify-content space-between
+      margin-bottom 1.5rem
       a
-        text-decoration: none
-        color: #5C5C5C
-        font-size: 1.2rem
-        transition: font-size 0.4s ease
+        text-decoration none
+        color #5C5C5C
+        font-size 1.2rem
+        transition font-size 0.4s ease
         &:hover
-          font-size: 1.3rem
-          color: #cc0000
+          font-size 1.3rem
+          color #cc0000
+
     .infoPrice 
-      display: flex
-      justify-content: center
+      display flex
+      justify-content center
       span
-        display: flex
-        margin-top: 2rem
-        font-weight: bold
+        display flex
+        margin-top 2rem
+        font-weight bold
       p
-        color: #cc0000
-        margin-left: 5px
+        color #cc0000
+        margin-left 5px
+
     .infoColors
-      display: flex
-      justify-content: center
-      flex-direction: column
-      align-items: center
+      display flex
+      justify-content center
+      flex-direction column
+      align-items center
       p
-        color: #5C5C5C
+        color #5C5C5C
+
       .listColors
-        display: flex
+        display flex
+
         .colors-hex
-          width: 30px
-          height: 30px
-          border-radius: 50%
-          margin-right: 10px 
+          width 30px
+          height 30px
+          border-radius 50%
+          margin-right 10px 
           cursor pointer
-          box-shadow: inset 0 1px 8px #0000004a
+          box-shadow inset 0 1px 8px #0000004a
+
       .nameColorSelected
-        margin-top: 1rem
-        font-size: 0.9rem
-        color: #5c5c5c
+        margin-top 1rem
+        font-size 0.9rem
+        color #5c5c5c
 
 .modal-state
-  background: #06060699
-  width: 100%
-  height: 100vh
-  display: none
-  align-items: center
-  justify-content: center
-  flex-direction: column
-  position: absolute;
-  top: 0;
+  background #06060699
+  width 100%
+  height 100vh
+  display none
+  align-items center
+  justify-content center
+  flex-direction column
+  position absolute
+  top 0
   &.active
-    display: flex
+    display flex
+
   .modal-container
-    display: flex
-    justify-content: center
-    flex-direction: column
-    align-items: center
-    width: 30%
-    height: 50vh
-    background: white
-    border-radius: 20px
-    text-align: center
-    padding: 1rem
-    position: relative
+    display flex
+    justify-content center
+    flex-direction column
+    align-items center
+    width 30%
+    height 50vh
+    background white
+    border-radius 20px
+    text-align center
+    padding 1rem
+    position relative
+
     .modal-title h3
-      font-weight: 300
-      font-size: 1.1rem
+      font-weight 300
+      font-size 1.1rem
     h2
-      font-size: 1.4rem
-      margin-bottom: 1.5rem
+      font-size 1.4rem
+      margin-bottom 1.5rem
+
   .modal-description
-    color: #525252
-    font-size: 0.9rem
-    max-width: 300px
+    color #525252
+    font-size 0.9rem
+    max-width 300px
+
   .modal-search
-    display: flex
-    flex-direction: column
-    padding: 1rem
-    width: 60%
-    margin-top: 0.5rem
+    display flex
+    flex-direction column
+    padding 1rem
+    width 60%
+    margin-top 0.5rem
+
     select
-      padding: 0.5rem
-      border-radius: 5px
-      margin-bottom: 1rem
+      padding 0.5rem
+      border-radius 5px
+      margin-bottom 1rem
+
     button 
-      background: #cc0000
-      padding: 0.5rem
-      border-radius: 5px
-      border: none
-      color: white
+      background #cc0000
+      padding 0.5rem
+      border-radius 5px
+      border none
+      color white
       cursor pointer
-      transition: background-color 0.4s ease
+      transition background-color 0.4s ease
       &:hover
-        background: #B20303
+        background #B20303

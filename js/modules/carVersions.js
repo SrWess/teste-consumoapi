@@ -17,11 +17,7 @@ export default function carVersions(nameCarSelected) {
 
       const linkClicked = event.target.innerText;
 
-      console.log(linkClicked);
-
       const versionCarAvailable = nameCarSelected.version_features;
-
-      console.log(versionCarAvailable);
 
       versionCarAvailable.forEach((info) => {
         if (linkClicked === info.version) {

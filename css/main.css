@@ -15,8 +15,9 @@ header {
   justify-content: space-around;
   position: fixed;
   width: 100%;
-  padding: 1.5rem;
-  box-shadow: 0 2px 0px #f3f3f3;
+  padding: 1.3rem;
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.05);
+  background: #fff;
 }
 header .location {
   font-size: 0.9rem;
@@ -35,68 +36,74 @@ header .locationPicked span {
   margin-right: 5px;
 }
 main {
-  background: #fff;
+  background: #f0f0f0;
   width: 100%;
   height: 100vh;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+main .imagesCar {
+  background: #fff;
+  width: 50%;
+  height: 60%;
+  border-radius: 10px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
-main .infoCar {
-  background: #fbfbfb;
-  width: 50%;
-  height: 40%;
+main .detailsCar {
+  width: 30%;
+  height: 60%;
   border-radius: 10px;
-  padding: 2.5rem;
-  box-shadow: 0 2px 10px 2px #ececec;
-}
-main .infoCar h3 {
-  color: #c00;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-main .infoCar .listCarVersions {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
-}
-main .infoCar .listCarVersions a {
-  text-decoration: none;
-  color: #5c5c5c;
-  font-size: 1.2rem;
-  transition: font-size 0.4s ease;
-}
-main .infoCar .listCarVersions a:hover {
-  font-size: 1.3rem;
-  color: #c00;
-}
-main .infoCar .infoPrice {
-  display: flex;
-  justify-content: center;
-}
-main .infoCar .infoPrice span {
-  display: flex;
-  margin-top: 2rem;
-  font-weight: bold;
-}
-main .infoCar .infoPrice p {
-  color: #c00;
-  margin-left: 5px;
-}
-main .infoCar .infoColors {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 }
-main .infoCar .infoColors p {
+main .listCarVersions,
+main .infoColors,
+main .infoPrice {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  height: 100px;
+  box-shadow: 2px 0px 5px rgba(0,0,0,0.05);
+}
+main .listCarVersions a,
+main .infoColors a,
+main .infoPrice a {
+  text-decoration: none;
+  color: #3f3f3f;
+  transition: all 0.2s ease;
+}
+main .listCarVersions a:hover,
+main .infoColors a:hover,
+main .infoPrice a:hover {
+  color: #c00;
+  font-weight: bold;
+  border-bottom: 2px solid #c00;
+}
+main .infoColors,
+main .infoPrice {
+  flex-direction: column;
+}
+main .infoColors p,
+main .infoPrice p {
+  text-align: center;
   color: #5c5c5c;
+  font-size: 0.9rem;
 }
-main .infoCar .infoColors .listColors {
+main .infoColors .listColors,
+main .infoPrice .listColors {
   display: flex;
 }
-main .infoCar .infoColors .listColors .colors-hex {
+main .infoColors .listColors .colors-hex,
+main .infoPrice .listColors .colors-hex {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -104,10 +111,28 @@ main .infoCar .infoColors .listColors .colors-hex {
   cursor: pointer;
   box-shadow: inset 0 1px 8px rgba(0,0,0,0.29);
 }
-main .infoCar .infoColors .nameColorSelected {
+main .infoColors .nameColorSelected,
+main .infoPrice .nameColorSelected {
   margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #5c5c5c;
+}
+main .infoPrice {
+  flex-direction: row;
+  justify-content: center;
+}
+main .infoPrice span {
+  display: flex;
+  align-items: center;
   font-size: 0.9rem;
   color: #5c5c5c;
+  text-align: center;
+}
+main .infoPrice p {
+  color: #c00;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 .modal-state {
   background: rgba(6,6,6,0.6);

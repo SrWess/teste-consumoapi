@@ -39,7 +39,10 @@ export default function findPriceLow(colorsAvailable) {
     { style: "currency", currency: "BRL" }
   );
 
-  infoPrice.innerHTML = `<span>A partir de <p class="priceState">${priceConverted}</p></span>`
+  infoPrice.innerHTML = `
+    <span>A partir de <p class="priceState">${priceConverted}</p></span>
+    <button type="button">Agende o teste drive</button>
+  `
   nameColorSelected.innerText = colorNameWithLowPrice.nameColor
 
   // console.log(nameColorAndPrice);

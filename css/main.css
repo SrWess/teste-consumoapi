@@ -71,8 +71,21 @@ main .infoPrice {
   width: 100%;
   border-radius: 10px;
   padding: 2rem;
-  height: 100px;
+  height: 110px;
   box-shadow: 2px 0px 5px rgba(0,0,0,0.05);
+  position: relative;
+}
+main .listCarVersions:after,
+main .infoColors:after,
+main .infoPrice:after {
+  content: 'Versões';
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Lexend', sans-serif;
+  color: #5b5b5b;
 }
 main .listCarVersions a,
 main .infoColors a,
@@ -90,7 +103,12 @@ main .infoPrice a:hover {
 }
 main .infoColors,
 main .infoPrice {
-  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+main .infoColors:after,
+main .infoPrice:after {
+  content: 'Cores Disponíveis';
 }
 main .infoColors p,
 main .infoPrice p {
@@ -113,13 +131,18 @@ main .infoPrice .listColors .colors-hex {
 }
 main .infoColors .nameColorSelected,
 main .infoPrice .nameColorSelected {
-  margin-top: 1rem;
   font-size: 0.8rem;
   color: #5c5c5c;
+  position: absolute;
+  bottom: 14px;
 }
 main .infoPrice {
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  height: 130px;
+}
+main .infoPrice:after {
+  content: 'CVT';
 }
 main .infoPrice span {
   display: flex;
@@ -133,6 +156,26 @@ main .infoPrice p {
   margin-left: 5px;
   font-weight: bold;
   font-size: 1.2rem;
+}
+main .infoPrice button {
+  border: none;
+  border-radius: 10px;
+  background: #c00;
+  color: #fff;
+  font-family: 'Lexend', sans-serif;
+  position: relative;
+  height: 35px;
+  width: 60%;
+  align-items: center;
+  display: flex;
+  left: 80px;
+  bottom: -20px;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2 ease;
+}
+main .infoPrice button:hover {
+  background: #b20303;
 }
 .modal-state {
   background: rgba(6,6,6,0.6);

@@ -50,6 +50,7 @@ main
     display flex
     justify-content center
     align-items center
+    flex-direction column
   .detailsCar
     width 30%
     height 60%
@@ -222,3 +223,48 @@ main
       transition background-color 0.4s ease
       &:hover
         background #B20303
+
+.listCars 
+  background #FFF
+  width 95%
+  border-radius 10px
+  position absolute
+  display flex
+  justify-content space-between
+
+  &:after
+    content 'Carros Disponíveis'
+    position absolute
+    left 20px
+    top 12px
+    font-size 1.1rem
+    font-weight 600
+    font-family 'Lexend', sans-serif
+    color #5B5B5B
+
+  .carsAvailable
+    background #FCFCFC
+    border-radius 10px
+    border 1px solid #F7F7F7
+    width 10%
+    height 100px
+    margin 1rem
+    display flex
+    flex-direction column
+    align-items center
+    justify-content center
+    position relative
+    bottom -50px
+    left 0px
+    padding 5rem
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    cursor pointer
+    transition transform 0.3s ease-in-out
+
+    &:hover
+      background-color #F3F3F3
+      transform translateY(-8px)
+
+    .img-preview-car
+      width 140px
+      margin-bottom 0.5rem

@@ -1,4 +1,5 @@
 import infoCar from './infoCar.js'
+import listCars from './listCars.js';
 import Modal from './modal.js';
 
 export default async function fetchHonda() {
@@ -37,6 +38,10 @@ export default async function fetchHonda() {
 
   const response = await fetch("http://localhost:3000");
   const responseJson = await response.json();
+
+  // console.log(responseJson);
+
+  listCars(responseJson)
 
   const containsUFState = localStorage.getItem("HONDA_LOCAL_STATE");
 

@@ -51,6 +51,7 @@ main .imagesCar {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 main .detailsCar {
   width: 30%;
@@ -240,4 +241,49 @@ main .infoPrice button:hover {
 }
 .modal-state .modal-search button:hover {
   background: #b20303;
+}
+.listCars {
+  background: #fff;
+  width: 95%;
+  border-radius: 10px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.listCars:after {
+  content: 'Carros Disponíveis';
+  position: absolute;
+  left: 20px;
+  top: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Lexend', sans-serif;
+  color: #5b5b5b;
+}
+.listCars .carsAvailable {
+  background: #fcfcfc;
+  border-radius: 10px;
+  border: 1px solid #f7f7f7;
+  width: 10%;
+  height: 100px;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  bottom: -50px;
+  left: 0px;
+  padding: 5rem;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.listCars .carsAvailable:hover {
+  background-color: #f3f3f3;
+  transform: translateY(-8px);
+}
+.listCars .carsAvailable .img-preview-car {
+  width: 140px;
+  margin-bottom: 0.5rem;
 }
